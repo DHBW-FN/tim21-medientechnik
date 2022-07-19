@@ -20,8 +20,9 @@
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,includehead]{geometry}      % Einstellungen der Seitenränder
 \usepackage[english, ngerman]{babel}                                                  % deutsche Silbentrennung
 \usepackage[utf8]{inputenc}                                                           % Umlaute
-\usepackage[T1]{fontenc}													                                    % Umlaute auch richtig ausgeben
-\usepackage{newtxtext,newtxmath}                                                      % Font = Times New Roman
+\usepackage[T1]{fontenc}													          % Umlaute auch richtig ausgeben
+%\usepackage{newtxtext,newtxmath}                                                      % Font = Times New Roman
+\usepackage{times}                                                      % Font = Times New Roman
 \usepackage{hyperref}
 \usepackage[nottoc]{tocbibind}
 \usepackage{fancyhdr}
@@ -146,6 +147,7 @@
   %%%%                   EIGENE KAPITEL EINFÜGEN                  %%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \include{chapter/Einleitung}
+  \include{chapter/UsabilityTest}
 
   %%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%
   \include{pages/literaturverzeichnis}
