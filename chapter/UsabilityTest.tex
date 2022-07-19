@@ -3,16 +3,55 @@
 \subsection{Inhalt}\label{subsec:inhalt}
 In diesem Kapitel wird die Usability anhand eines Usability Tests getestet.
 Bei den Tests wird sich zur Vereinfachung der Vergleichbarkeit aud die Seiten google.de, bing.de, qwant.de beschränkt.
-Auch wird sich bei der Einhaltung von Regeln und Gesetzen auf das deutsche Recht beschränkt.
+Auch wird sich bei der Einhaltung von Regeln und Gesetzen auf das deutsche Recht beschränkt.\newline
+Es wird die Usability anhand der folgenden Kriterien getestet:
+%TODO welche Kriterien werden getestet?
+\begin{itemize}
+    \item\nameref{subsec:accessibility}
+\end{itemize}
 
 \subsection{Accessibility}\label{subsec:accessibility}
 In diesem Kapitel wird die Accessibility getestet.
+Es gibt einige Tests, die manuell und aufwändig getestet werden müssen.
+Diese wurden nicht durchgeführt und es wurde sich auf die Ergebnisse der automatisierten Tests beschränkt.
 
 Es werden die Guidelines der Web Accessibility Initiative (WAI) verwendet.
-Diese Guidelines sind auf der Seite https://www.w3.org/WAI/standards-guidelines/wcag/ verfügbar.
-Es wird unterschieden in folgende Level:
+Diese Guidelines sind auf der Seite \url{https://www.w3.org/WAI/standards-guidelines/wcag/} verfügbar.\newline
+Es wird unterschieden in folgende Level~\cite{WCAG21}:
 \begin{itemize}
-\item Level A
-\item Level AA
-\item Level AAA
-\end{itemize}\cite{WCAG21}
+\item Level A: niedrigstes Level der Accessibility.
+\item Level AA: mittleres Level der Accessibility.
+\item Level AAA: höchstes Level der Accessibility.
+\end{itemize}
+
+%TODO link to appendix
+\subsubsection{Google}\label{subsubsec:google}
+Wie in der Auswertung des Accessibility-Tests zu sehen ist, hat \url{google.de} mehrere Probleme mit der Accessibility.
+Davon sind folgende Probleme als kritisch bewertet:
+\begin{enumerate}
+    \item Ein Button hat keinen besonderen Namen bekommen, wodurch es für Screenreader nicht möglich ist den Nutzern die Funktion des Buttons mitzuteilen.
+    \item Der Kontrast zwischen Hintergrund und Vordergrund ist nicht ausreichend.
+\end{enumerate}
+Diese Probleme sind zwar als kritisch markiert, das Problem mit dem Button ist aber bei mehrfachen Tests nicht mehr aufgetreten.
+Da minimale Kontraste in den WCAG 2.1-Guidelines erst für Level AA vorgeschrieben sind ist dies nicht fatal, sollte jedoch für ein Unternehmen wie Google durchaus erstrebenswert sein,
+um die Benutzbarkeit für Menschen mit Sehbehinderung zu verbessern.
+
+\subsubsection{Bing}\label{subsubsec:bing}
+Wie in der Auswertung des Accessibility-Tests zu sehen ist, hat \url{bing.de} ein Problem mit der Accessibility.
+Folgendes Problem wurde als kritisch bewertet:
+\begin{enumerate}
+    \item Die Zoomfunktion wurde in den meta-Tags deaktiviert.
+\end{enumerate}
+Dieses Problem scheint jedoch nur das Hintergrundbild zu betreffen, da das Interface vergrößert werden kann.
+Aus diesem Grund ist das Problem als nicht kritisch zu betrachten, da die Benutzbarkeit für Menschen mit Sehbehinderung nicht beeinträchtigt wird.
+
+\subsubsection{Qwant}\label{subsubsec:qwant}
+Wie in der Auswertung des Accessibility-Tests zu sehen ist, hat \url{qwant.de} Probleme mit der Accessibility.
+Folgende Probleme wurden als kritisch bewertet:
+\begin{enumerate}
+    \item Ein Button hat keinen besonderen Namen bekommen, wodurch es für Screenreader nicht möglich ist den Nutzern die Funktion des Buttons mitzuteilen.
+    \item Der Linktext einiger Elemente ist nicht eindeutig.
+\end{enumerate}
+Das Problem mit den Nicht eindeutig benannten Elementen ist auch bei mehrfachen Tests aufgetreten.
+Da eindeutige Namen in den WCAG 2.1-Guidelines für Level A vorgeschrieben sind siehe `Success Criterion 1.1.1 Non-text Content`\cite{WCAG21},
+ist dies eine klare Verletzung der WCAG 2.1 A Guidelines, wodurch sich \url{qwant.de} nicht für eine Accessibility-Kompatibilität laut WCAG 2.1-Guidelines qualifiziert.
