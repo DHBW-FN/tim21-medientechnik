@@ -157,9 +157,31 @@ Da eindeutige Namen in den WCAG 2.1-Guidelines für Level A vorgeschrieben sind 
 ist dies eine klare Verletzung der WCAG 2.1 A Guidelines, wodurch sich \url{qwant.de} nicht für eine Accessibility-Kompatibilität laut WCAG 2.1-Guidelines qualifiziert.
 
 \section{Vergleich}\label{sec:vergleich}
+In diesem Kapitel werden die Ergebnisse der selbst durchgeführten Tests,
+sowie der automatisierten Accessibility-Tests zusammengeführt, abstrahiert und in Perspektive gesetzt.
+In~\nameref{fig:google_home},~\nameref{fig:bing_home} und~\nameref{fig:qwant_home} sind die Startseiten der jeweiligen Seiten zu sehen.\\
+
+Nach Abschluss der Accessibility Tests ist zu sagen,
+dass aus Accessibility Sicht sich die etablierten Suchmaschinen \url{google.de} und \url{bing.de} nicht sehr unterscheiden.
+Beide haben zwar Probleme mit der Benennung der Knöpfe und Bilder, was für Screenreader und Menschen mit Sehbehinderung nicht optimal ist.
+Erfüllen jedoch den WCAG 2.1 A Standard.
+Um die Accessibility zu verbessern, sollten die Seiten jedoch kontrastreicher gestaltet werden.\\
+
+\url{qwant.de} hat jedoch klare Probleme mit der eindeutigen Benennung von Knöpfen und Linktexten, was an der Überladung der Seite liegt.
+So sieht man zum Beispiel in~\nameref{fig:qwant_home}, dass der User neben den notwendigen Elementen,
+wie einer Suchleiste, Einstellungen und eventuell weiteren Produkten des Unternehmens mit zu vielen Informationen überschüttet wird.
+Um die Accessibility zu verbessern, sollte die Seite ihr Design vereinfachen und sich auf der Startseite auf die zur Funktionalität beitragenden Elemente beschränken.
+
+
 \begin{figure}[h]
     \centering
     \fbox{\includegraphics[height=0.3\textheight]{google_home}}\caption{Google Home}\label{fig:google_home}
+\end{figure}
+\begin{figure}[h]
+    \centering
     \fbox{\includegraphics[height=0.3\textheight]{bing_home}}\caption{Bing Home}\label{fig:bing_home}
+\end{figure}
+\begin{figure}[h]
+    \centering
     \fbox{\includegraphics[height=0.3\textheight]{qwant_home}}\caption{Qwant Home}\label{fig:qwant_home}
 \end{figure}
