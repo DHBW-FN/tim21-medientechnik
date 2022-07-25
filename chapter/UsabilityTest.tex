@@ -1,16 +1,16 @@
-\chapter{Usability}\label{ch:usability}
+\section{Usability}\label{sec:usability}
 
 In diesem Kapitel wird die Usability anhand eines Usability Tests getestet.
 Bei den Tests wird sich zur Vereinfachung der Vergleichbarkeit aud die Seiten google.de, bing.de, qwant.de beschränkt.
 Auch wird sich bei der Einhaltung von Regeln und Gesetzen auf das deutsche Recht beschränkt.
 
-\section{Test-Szenarien}\label{sec:szenarien}
+\subsection{Test-Szenarien}\label{subsec:szenarien}
 Zur Durchführung wurden eine kleine Gruppe Informatik Studenten der \textbf{DHBW} gewählt.
 Aufgrund mangelnder Ressourcen wurden diese in Eigenregie und ohne erstrebenswerte Tracking-Technologien wie z.B.\ Eye-tracking oder ähnliches durchgeführt.
 Die Tester haben die Szenarien mit den drei verschiedenen Suchmaschinen \url{google.de} \url{bing.de} \url{qwant.de} durchgeführt,
 und die Ergebnisse nach vorgegebenem Schema auf einer Skala von 1 bis 10 bewertet.
 
-\subsection{Tag des Internets}\label{subsec:szenario1}
+\subsubsection{Tag des Internets}\label{subsubsec:szenario1}
 In diesem Szenario bekamen die Tester den Auftrag herauszufinden, wann der Tag des Internets ist.
 
 \begin{tabular}{|c|c|c|c|}
@@ -60,7 +60,7 @@ sondern erst in den Ergebnisseiten zu finden ist
     \caption{Ergebnisseite von \url{qwant.de}}\label{fig:qwant_tag_des_internets_results}
 \end{figure}
 
-\subsection{Katzenbild}\label{subsec:szenario2}
+\subsubsection{Katzenbild}\label{subsubsec:szenario2}
 In diesem Szenario bekamen die Tester den Auftrag ein Katzenbild zu finden.
 
 \begin{tabular}{|c|c|c|c|}
@@ -86,7 +86,7 @@ was es den Testern ermöglichte in kürzerer Zeit bessere Ergebnisse zu erzielen
 
 \paragraph{\url{qwant.de}} hat einen ähnlich guten Ansatz wie \url{bing.de} gewählt und präsentierte die Bilder direkt auf der Ergebnisseite sogar etwas weiter oben.
 
-\subsection{Songtext}\label{subsec:szenario3}
+\subsubsection{Songtext}\label{subsubsec:szenario3}
 In diesem Szenario bekamen die Tester den Auftrag den Songtext des Lieds Never gonna give you up von Rick Astley zu finden.
 
 \begin{tabular}{|c|c|c|c|}
@@ -109,7 +109,7 @@ auf denen die Liedtexte zu finden waren oder im besten Fall den kompletten Liedt
 \paragraph{\url{bing.de}} zeigte meist ein etwas hervorgehobenes Ergebnis als Erstes an, wo kleine Teile des Liedtextes zu sehen waren.
 \paragraph{\url{qwant.de}} zeigte bei allen keine hervorgehobenen Ergebnisse an, sondern nur die gewöhnte Ergebnisseite.
 
-\section{Accessibility}\label{sec:accessibility}
+\subsection{Accessibility}\label{subsec:accessibility2}
 In diesem Kapitel wird die Accessibility getestet.
 Es gibt einige Tests, die manuell und aufwändig getestet werden müssen.
 Diese wurden nicht durchgeführt und es wurde sich auf die Ergebnisse der automatisierten Tests beschränkt.
@@ -123,7 +123,7 @@ Es wird unterschieden in folgende Level~\autocite{WCAG21}:
     \item Level AAA: höchstes Level der Accessibility.
 \end{itemize}
 
-\subsection{Google}\label{subsec:google}
+\subsubsection{Google}\label{subsubsec:google}
 Wie in der Auswertung des Accessibility-Tests zu sehen ist, hat \url{google.de} mehrere Probleme mit der Accessibility.
 Davon sind folgende Probleme als kritisch bewertet:
 \begin{enumerate}
@@ -134,7 +134,7 @@ Diese Probleme sind zwar als kritisch markiert, das Problem mit dem Button ist a
 Da minimale Kontraste in den WCAG 2.1-Guidelines erst für Level AA vorgeschrieben sind ist dies nicht fatal, sollte jedoch für ein Unternehmen wie Google durchaus erstrebenswert sein,
 um die Benutzbarkeit für Menschen mit Sehbehinderung zu verbessern.
 
-\subsection{Bing}\label{subsec:bing}
+\subsubsection{Bing}\label{subsubsec:bing}
 Wie in der Auswertung des Accessibility-Tests zu sehen ist, hat \url{bing.de} ein Problem mit der Accessibility.
 Folgendes Problem wurde als kritisch bewertet:
 \begin{enumerate}
@@ -143,7 +143,7 @@ Folgendes Problem wurde als kritisch bewertet:
 Dieses Problem scheint jedoch nur das Hintergrundbild zu betreffen, da das Interface vergrößert werden kann.
 Aus diesem Grund ist das Problem als nicht kritisch zu betrachten, da die Benutzbarkeit für Menschen mit Sehbehinderung nicht beeinträchtigt wird.
 
-\subsection{Qwant}\label{subsec:qwant}
+\subsubsection{Qwant}\label{subsubsec:qwant}
 Wie in der Auswertung des Accessibility-Tests zu sehen ist, hat \url{qwant.de} Probleme mit der Accessibility.
 Folgende Probleme wurden als kritisch bewertet:
 \begin{enumerate}
@@ -154,12 +154,12 @@ Das Problem mit den Nicht eindeutig benannten Elementen ist auch bei mehrfachen 
 Da eindeutige Namen in den WCAG 2.1-Guidelines für Level A vorgeschrieben sind siehe `Success Criterion 1.1.1 Non-text Content`\autocite{WCAG21},
 ist dies eine klare Verletzung der WCAG 2.1 A Guidelines, wodurch sich \url{qwant.de} nicht für eine Accessibility-Kompatibilität laut WCAG 2.1-Guidelines qualifiziert.
 
-\section{Vergleich}\label{sec:vergleich}
+\subsection{Vergleich}\label{subsec:vergleich}
 In diesem Kapitel werden die Ergebnisse der selbst durchgeführten Tests,
 sowie der automatisierten Accessibility-Tests zusammengeführt, abstrahiert und in Perspektive gesetzt.
 In~\nameref{fig:google_home},~\nameref{fig:bing_home} und~\nameref{fig:qwant_home} sind die Startseiten der jeweiligen Seiten zu sehen.\\
 
-\subsection*{Accessibility}\label{subsec:accessibility}
+\subsubsection*{Accessibility}\label{subsubsec:accessibility}
 Nach Abschluss der Accessibility Tests ist zu sagen,
 dass aus Accessibility Sicht sich die etablierten Suchmaschinen \url{google.de} und \url{bing.de} nicht sehr unterscheiden.
 Beide haben zwar Probleme mit der Benennung der Knöpfe und Bilder, was für Screenreader und Menschen mit Sehbehinderung nicht optimal ist.
@@ -171,7 +171,7 @@ So sieht man zum Beispiel in~\nameref{fig:qwant_home}, dass der User neben den n
 wie einer Suchleiste, Einstellungen und eventuell weiteren Produkten des Unternehmens mit zu vielen Informationen überschüttet wird.
 Um die Accessibility zu verbessern, sollte die Seite ihr Design vereinfachen und sich auf der Startseite auf die zur Funktionalität beitragenden Elemente beschränken.
 
-\subsection*{Usability}\label{subsec:usability}
+\subsubsection*{Usability}\label{subsubsec:usability}
 Nach Abschluss der allgemeinen Usability-Tests und der Testszenarien ist zu sagen, dass
 die Tester sich auf allen Suchmaschinen zurechtgefunden haben und alle Tests erfolgreich durchgeführt wurden.
 Jede Seite hat eine Suchleiste, die mehr oder weniger zentral platziert ist und über die die Hauptfunktionalität der Seiten verwendet werden kann.
