@@ -20,8 +20,9 @@
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,includehead]{geometry}      % Einstellungen der Seitenränder
 \usepackage[english, ngerman]{babel}                                                  % deutsche Silbentrennung
 \usepackage[utf8]{inputenc}                                                           % Umlaute
-\usepackage[T1]{fontenc}													                                    % Umlaute auch richtig ausgeben
-\usepackage{newtxtext,newtxmath}                                                      % Font = Times New Roman
+\usepackage[T1]{fontenc}                                                              % Umlaute auch richtig ausgeben
+%\usepackage{newtxtext,newtxmath}                                                      % Font = Times New Roman
+\usepackage{times}                                                      % Font = Times New Roman
 \usepackage{hyperref}
 \usepackage[nottoc]{tocbibind}
 \usepackage{fancyhdr}
@@ -31,7 +32,7 @@
 \usepackage{amsmath}                                                                  % Zurücksetzen der Tabellen- und Abbildungsnummerierung je Sektion
 \usepackage[labelfont=bf,aboveskip=1mm]{caption}                                      % Bild- und Tabellenunterschrift (fett)
 \usepackage[bottom,multiple,hang,marginal]{footmisc}                                  % Fußnoten [Ausrichtung unten, Trennung durch Seperator bei mehreren Fußnoten]
-\usepackage{graphicx}  
+\usepackage{graphicx}
 \graphicspath{{./images/}}                                                            % Grafiken
 \usepackage[dvipsnames]{xcolor}                                                       % Farbige Buchstaben
 \usepackage{wrapfig}                                                                  % Bilder in Text integrieren
@@ -77,21 +78,21 @@
 
 
 %%%%%%%%%%%%%%%%%%%% Zitatbibliothek einbinden %%%%%%%%%%%%%%%%%%%%%
-\addbibresource{./literatur/literatur.bib}
-\addbibresource{./literatur/literatur_googlestrategy.bib}
+\addbibresource{literatur/literatur.bib}
+\addbibresource{literatur/literatur_usability.bib}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% PDF-Einstellungen %%%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{
-  bookmarksopen=false,
-	bookmarksnumbered=true,
-	bookmarksopenlevel=0,
-  pdftitle=\vTitel,
-  pdfsubject=\vTitel,
-  pdfauthor=\vAutor,
-  pdfborder={0 0 0},
-	pdfstartview=Fit,
-  pdfpagelayout=SinglePage
+    bookmarksopen=false,
+    bookmarksnumbered=true,
+    bookmarksopenlevel=0,
+    pdftitle=\vTitel,
+    pdfsubject=\vTitel,
+    pdfauthor=\vAutor,
+    pdfborder={0 0 0},
+    pdfstartview=Fit,
+    pdfpagelayout=SinglePage
 }
 
 
@@ -107,8 +108,8 @@
 \setlist{noitemsep}
 
 \addto\catpionsngerman{
-  \renewcommand{\figurename}{Abb.}
-  \renewcommand{\tablename}{Tab.}
+    \renewcommand{\figurename}{Abb.}
+    \renewcommand{\tablename}{Tab.}
 }
 \numberwithin{table}{section}                               % Tabellennummerierung je Sektion zurücksetzen
 \numberwithin{figure}{section}                              % Abbildungsnummerierung je Sektion zurücksetzen
@@ -124,40 +125,43 @@
 \begin{document}
 
 
-  %%%%%%%%%%%%%%%%%%% Einführung und Verzeichnisse %%%%%%%%%%%%%%%%%%%
-  \pagenumbering{Roman}
+    %%%%%%%%%%%%%%%%%%% Einführung und Verzeichnisse %%%%%%%%%%%%%%%%%%%
+    \pagenumbering{Roman}
 
-  \include{pages/titel}
-  % \include{pages/sperrvermerk}
-  \include{pages/selbststaendigkeitserklaerung}
-  \include{pages/abstract}
-  \include{pages/inhaltsverzeichnis}
-  \include{pages/abkuerzungsverzeichnis}
-  \include{pages/abbildungsverzeichnis}
-  \include{pages/tabellenverzeichnis}
-  % \include{pages/vorwort}
-
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kapitel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \pagestyle{fancy}
-  \fancyhead[L]{\nouppercase{\rightmark}}    % Abschnittsname im Header
-  \pagenumbering{arabic}
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %%%%                   EIGENE KAPITEL EINFÜGEN                  %%%%
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \include{chapter/Einleitung}
-  \include{chapter/Googlestrategie}
-
-  %%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%
-  \include{pages/literaturverzeichnis}
+    \include{pages/titel}
+    % \include{pages/sperrvermerk}
+    \include{pages/selbststaendigkeitserklaerung}
+    \include{pages/abstract}
+    \include{pages/inhaltsverzeichnis}
+    \include{pages/abkuerzungsverzeichnis}
+    \include{pages/abbildungsverzeichnis}
+    \include{pages/tabellenverzeichnis}
+    % \include{pages/vorwort}
 
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \renewcommand{\thetable}{\Alph{section}.\arabic{table}}
-  \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
-  \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
-  \pagenumbering{Alph}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kapitel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \pagestyle{fancy}
+    \fancyhead[L]{\nouppercase{\rightmark}}    % Abschnittsname im Header
+    \pagenumbering{arabic}
 
-  \include{pages/anhang}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%                   EIGENE KAPITEL EINFÜGEN                  %%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \include{chapter/Einleitung}
+    \include{chapter/Konkurrenzanalyse}
+    \include{chapter/Googlestrategie}
+    \include{chapter/Qwant-erfolg}
+    \include{chapter/UsabilityTest}
+
+    %%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%
+    \include{pages/literaturverzeichnis}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anhang %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+    \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+    \renewcommand{\thelstlisting}{\Alph{section}.\arabic{lstlisting}}
+    \pagenumbering{Alph}
+
+    \include{pages/anhang}
 \end{document}
